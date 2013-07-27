@@ -15,3 +15,18 @@ before_script:
 script:
   - npm -d install
   - npm test
+  
+after_success:
+  - git clone https://github.com/andrewbeng89/mitb_travis-ci
+  - cd mitb_travis-ci
+  - git branch -a
+  - git checkout gh-pages
+  - ls
+  - git checkout master -- public
+  - git add -A .
+  - git config --global user.email "andrew.beng.2010@sis.smu.edu.sg"
+  - git config --global user.name "andrewbeng89"
+  - git commit -m "drone.io update"
+  - git status
+  - git remote add github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
+  - git push github-origin gh-pages
