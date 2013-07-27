@@ -11,6 +11,8 @@ branches:
     
 before_script:
   - npm install -g mocha
+  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
   - npm -d install
@@ -30,5 +32,3 @@ after_success:
   - git status
   - git remote add github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
   - git push github-origin gh-pages
-  - expect "Are you sure you want to continue connecting (yes/no)?"
-  - send "yes"
