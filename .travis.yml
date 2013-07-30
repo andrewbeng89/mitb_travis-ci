@@ -23,6 +23,7 @@ after_success:
   - cd mitb_travis-ci
   - git branch -a
   - git checkout gh-pages
+  - git rm -rf .
   - ls
   - git checkout master -- public
   - git add -A .
