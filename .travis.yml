@@ -23,7 +23,7 @@ script:
   - npm test
   
 after_success:
-  - git clone git@github.com:andrewbeng89/mitb_travis-ci.git
+  - git clone https://github.comandrewbeng89/mitb_travis-ci.git
   - cd mitb_travis-ci
   - git branch -a
   - git checkout gh-pages
@@ -34,4 +34,4 @@ after_success:
   - git config --global user.name "andrewbeng89"
   - git commit -m "drone.io update"
   - git status
-  - git push origin gh-pages
+  - git push https://c688e5324914dd76e76d83b58c29a76ab475da40@github.com/andrewbeng89/mitb_travis-ci.git gh-pages
