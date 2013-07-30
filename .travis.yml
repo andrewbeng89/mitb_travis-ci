@@ -11,10 +11,6 @@ before_script:
 - npm install -g mocha
 - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-env:
-  global:
-  - secure: JFgP7pHkHC5Ve9Bt1qozVWFTth32Bv1Kc8u4mcGRC/XnhxfW3Qxqucdr1p4DNrTh1hBPUiQ3CObP/28t2m7ChqMA+sPqBZT7V20CUbcTkKNm/A4ptyvtPuNWRbhdJQmN1tZI61YchPXrwIsLimYFucH8GVM3EiTd70Il+Cme5Sk=
-  - secure: NAzJiuAJXW9RaHuwUT7521UFV9ZoqjRpoAx6BjBIht03Z+hyVsPp6WRfq/6KGqXwWdCi2LWv1dL+OfpSm+888sSrSMrvR4kBmOzfR79X/Do5QKeg5oq58sstrhLzZaYs4uw3ANpg8VZUgyYwqjTIdH9CsKVLcAT88bm/J8lO9S4=
 script:
 - npm -d install
 - npm test
@@ -31,3 +27,7 @@ after_success:
 - git commit -m "drone.io update"
 - git status
 - git push https://$MY_GITHUB_TOKEN@github.com/andrewbeng89/mitb_travis-ci.git gh-pages
+
+env:
+  global:
+    secure: JqlmUULQ4XRF+Ma/ituS3c9T2WOBsglo1h6dxEu70v//MrHWw111rVR+QrfTd5gGD8ewXyIRO6E1vP+EmlqFkPVzwsLefzdSIu17NQ9ZUILc7d8vIw8kJnqloMduZjLyJ3u5VVrqOcY1/JJcmPVlcg4J2mP49sJNlxEPs2x7Xq0=
