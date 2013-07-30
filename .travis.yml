@@ -34,5 +34,4 @@ after_success:
   - git config --global user.name "andrewbeng89"
   - git commit -m "drone.io update"
   - git status
-  - git remote add github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
-  - git push github-origin gh-pages
+  - git push https://$MY_GITHUB_TOKEN@github.com/andrewbeng89/mitb_travis-ci.git gh-pages
