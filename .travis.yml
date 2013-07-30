@@ -11,24 +11,24 @@ branches:
     
 before_script:
   - npm install -g mocha
+  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
   - npm -d install
   - npm test
   
 after_success:
-  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - git clone git@github.com:andrewbeng89/mitb_travis-ci.git
+  - git clone https://github.com/andrewbeng89/mitb_travis-ci
   - cd mitb_travis-ci
   - git branch -a
   - git checkout gh-pages
   - ls
   - git checkout master -- public
   - git add -A .
-  - git remote set-url origin git@github.com:andrewbeng89/mitb_travis-ci.git
   - git config --global user.email "andrew.beng.2010@sis.smu.edu.sg"
   - git config --global user.name "andrewbeng89"
   - git commit -m "drone.io update"
   - git status
-  - git push origin gh-pages
+  - git remote add github-origin https://github.com/andrewbeng89/mitb_travis-ci
+  - git push github-origin gh-pages
