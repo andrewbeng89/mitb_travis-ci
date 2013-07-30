@@ -11,8 +11,6 @@ branches:
     
 before_script:
   - npm install -g mocha
-  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
   - npm -d install
