@@ -8,3 +8,4 @@
 {"ts":1375162289051,"patch":[[{"diffs":[[0," module!"],[1,"! Some changes here..."],[0,"</h2>\n  "]],"start1":161,"start2":161,"length1":16,"length2":38}]],"length":214,"saved":false}
 {"ts":1375162615734,"patch":[[{"diffs":[[0,"s here.."],[-1,"."],[0,"</h2>\n  "]],"start1":182,"start2":182,"length1":17,"length2":16}]],"length":213,"saved":false}
 {"ts":1375162847205,"patch":[[{"diffs":[[0," module!"],[-1,"!"],[0," Some ch"]],"start1":161,"start2":161,"length1":17,"length2":16}]],"length":212,"saved":false}
+{"ts":1375163353415,"patch":[[{"diffs":[[0,"loud"],[-1," module"],[0,"! So"]],"start1":157,"start2":157,"length1":15,"length2":8}]],"length":205,"saved":false}

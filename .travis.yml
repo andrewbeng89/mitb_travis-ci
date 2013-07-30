@@ -9,13 +9,11 @@ branches:
   - master
 before_script:
 - npm install -g mocha
-- echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - npm -d install
 - npm test
 after_success:
-- git clone https://github.comandrewbeng89/mitb_travis-ci.git
+- git clone https://github.com/andrewbeng89/mitb_travis-ci
 - cd mitb_travis-ci
 - git branch -a
 - git checkout gh-pages
@@ -27,7 +25,6 @@ after_success:
 - git commit -m "drone.io update"
 - git status
 - git push https://$MY_GITHUB_TOKEN@github.com/andrewbeng89/mitb_travis-ci.git gh-pages
-
 env:
   global:
     secure: JqlmUULQ4XRF+Ma/ituS3c9T2WOBsglo1h6dxEu70v//MrHWw111rVR+QrfTd5gGD8ewXyIRO6E1vP+EmlqFkPVzwsLefzdSIu17NQ9ZUILc7d8vIw8kJnqloMduZjLyJ3u5VVrqOcY1/JJcmPVlcg4J2mP49sJNlxEPs2x7Xq0=
