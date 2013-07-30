@@ -31,5 +31,5 @@ after_success:
   - git commit -m "drone.io update"
   - git status
   - git remote add github-origin git://github.com/andrewbeng89/mitb_travis-ci.git
-  - git remote set-url origin git@github.com:andrewbeng89/mitb_travis-ci.git
+  - git remote set-url github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
   - git push github-origin gh-pages
