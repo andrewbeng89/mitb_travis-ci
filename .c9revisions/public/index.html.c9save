@@ -3,3 +3,4 @@
 {"ts":1375152069634,"patch":[[{"diffs":[[0,"est page"],[1,". Welcome!"],[0,"</h2>\n  "]],"start1":130,"start2":130,"length1":16,"length2":26}]],"length":171,"saved":false}
 {"ts":1375152325394,"patch":[[{"diffs":[[0," Welcome"],[1," to MITB Cloud"],[0,"!</h2>\n "]],"start1":139,"start2":139,"length1":16,"length2":30}]],"length":185,"saved":false}
 {"ts":1375153052943,"patch":[[{"diffs":[[0,"TB Cloud"],[1," module"],[0,"!</h2>\n "]],"start1":153,"start2":153,"length1":16,"length2":23}]],"length":192,"saved":false}
+{"ts":1375153407110,"patch":[[{"diffs":[[0," module!"],[1,"!"],[0,"</h2>\n  "]],"start1":161,"start2":161,"length1":16,"length2":17}]],"length":193,"saved":false}
