@@ -14,6 +14,10 @@ before_script:
   - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
+env:
+    global:
+        - secure: "JFgP7pHkHC5Ve9Bt1qozVWFTth32Bv1Kc8u4mcGRC/XnhxfW3Qxqucdr1p4DNrTh1hBPUiQ3CObP/28t2m7ChqMA+sPqBZT7V20CUbcTkKNm/A4ptyvtPuNWRbhdJQmN1tZI61YchPXrwIsLimYFucH8GVM3EiTd70Il+Cme5Sk="
+
 script:
   - npm -d install
   - npm test
@@ -30,6 +34,5 @@ after_success:
   - git config --global user.name "andrewbeng89"
   - git commit -m "drone.io update"
   - git status
-  - git remote add github-origin git://github.com/andrewbeng89/mitb_travis-ci.git
-  - git remote set-url github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
+  - git remote add github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
   - git push github-origin gh-pages
