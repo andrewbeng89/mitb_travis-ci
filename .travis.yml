@@ -17,7 +17,7 @@ script:
   - npm test
   
 after_success:
-  - git clone https://github.com/andrewbeng89/mitb_travis-ci
+  - git clone git@github.com:andrewbeng89/mitb_travis-ci.git
   - cd mitb_travis-ci
   - git branch -a
   - git checkout gh-pages
@@ -28,5 +28,6 @@ after_success:
   - git config --global user.name "andrewbeng89"
   - git commit -m "drone.io update"
   - git status
-  - git remote add github-origin git@github.com:andrewbeng89/mitb_travis-ci.git
-  - git push github-origin gh-pages
+  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - git push origin gh-pages
